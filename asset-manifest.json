@@ -1,7 +1,7 @@
 {
   "main.css": "/Textutils/static/css/main.bbf6cc7b.chunk.css",
-  "main.js": "/Textutils/static/js/main.41f7ca4a.chunk.js",
-  "main.js.map": "/Textutils/static/js/main.41f7ca4a.chunk.js.map",
+  "main.js": "/Textutils/static/js/main.7f945c9b.chunk.js",
+  "main.js.map": "/Textutils/static/js/main.7f945c9b.chunk.js.map",
   "runtime~main.js": "/Textutils/static/js/runtime~main.a6dbe6f9.js",
   "runtime~main.js.map": "/Textutils/static/js/runtime~main.a6dbe6f9.js.map",
   "static/js/2.ca48165b.chunk.js": "/Textutils/static/js/2.ca48165b.chunk.js",
@@ -9,7 +9,7 @@
   "static/js/3.d62f7fe7.chunk.js": "/Textutils/static/js/3.d62f7fe7.chunk.js",
   "static/js/3.d62f7fe7.chunk.js.map": "/Textutils/static/js/3.d62f7fe7.chunk.js.map",
   "index.html": "/Textutils/index.html",
-  "precache-manifest.bb2068dd810d936f2f140310e2a683df.js": "/Textutils/precache-manifest.bb2068dd810d936f2f140310e2a683df.js",
+  "precache-manifest.cc7253bd14b4322b2b55c975a0957d4f.js": "/Textutils/precache-manifest.cc7253bd14b4322b2b55c975a0957d4f.js",
   "service-worker.js": "/Textutils/service-worker.js",
   "static/css/main.bbf6cc7b.chunk.css.map": "/Textutils/static/css/main.bbf6cc7b.chunk.css.map"
 }
