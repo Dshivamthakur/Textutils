@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
@@ -28,13 +28,17 @@ function App() {
 
   const toggleMode = () => {
     let colorPalettes = document.getElementsByClassName('color-palette');
-    let buttons = document.getElementsByTagName('button');
+    let buttons = document.getElementsByClassName('ChangeColors');
+    let AboutButtons = document.getElementsByClassName('accordion-button');
     if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       Array.from(colorPalettes).forEach(colorPalettes => colorPalettes.style.display = 'block');
+      Array.from(AboutButtons).forEach((button) => {
+        button.style.backgroundColor = "#449ee6";
+      });
       showAlert('Dark mode has been enable', 'success');
-      document.title = 'TextUtils - Dark Mode';
+      // document.title = 'TextUtils - Dark Mode';
     }
     else {
       setMode('light');
@@ -44,20 +48,25 @@ function App() {
         button.style.backgroundColor = '#0d6efd';
         button.style.borderColor = '#0d6efd';
       });
+      Array.from(AboutButtons).forEach((button) => {
+        button.style.backgroundColor = "white";
+      });
       showAlert('Light mode has been enable', 'success');
-      document.title = 'TextUtils - Light Mode';
+      // document.title = 'TextUtils - Light Mode';
     }
   }
 
-  const changeDarkModeColor = (bodybackgroundColor, buttonsbodybackgroundColor) => {
+  const changeDarkModeColor = (bodybackgroundColor, buttonsbodybackgroundColor,AboutButtonsBackgroundColor) => {
     document.body.style.backgroundColor = bodybackgroundColor;
-    let buttons = document.getElementsByTagName('button');
-    let containers = document.getElementsByClassName('container');
+    let buttons = document.getElementsByClassName('ChangeColors');
+    let AboutButtons = document.getElementsByClassName('accordion-button');
     Array.from(buttons).forEach((button) => {
       button.style.backgroundColor = buttonsbodybackgroundColor;
       button.style.borderColor = buttonsbodybackgroundColor;
     });
-    Array.from(containers).forEach((container) => container.style.color = 'white');
+    Array.from(AboutButtons).forEach((button) => {
+      button.style.backgroundColor = AboutButtonsBackgroundColor;
+    });
   }
 
   return (
@@ -65,7 +74,9 @@ function App() {
         <Navbar title='TextUtils' aboutText='About TextUtils' mode={mode} toggleMode={toggleMode} changeDarkModeColor={changeDarkModeColor} />
         <Alert alert={alert} />
         <div className="container my-3">
-              <TextForm showAlert={showAlert} heading="Enter The text to analyze below" mode={mode} />
+              <TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, 
+              Remove extra spaces" mode={mode} />
+              {/* <About mode={mode}/> */}
         </div>
     </>
   );

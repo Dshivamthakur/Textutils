@@ -43,9 +43,9 @@ export default function Navbar(props) {
               Search
             </button>
           </form> */}
-          <div className="color-palette mx-2" onClick={()=>props.changeDarkModeColor('#042743','blue')} style={{backgroundColor:'#042743'}} ></div>
-          <div className="color-palette mx-2" onClick={()=>props.changeDarkModeColor('#062925','#2a4242')} style={{backgroundColor:'#062925'}} ></div>
-          <div className="color-palette mx-2" onClick={()=>props.changeDarkModeColor('black','#BB86FC')} style={{backgroundColor:'black'}} ></div>
+          <div className="color-palette mx-2" onClick={()=>props.changeDarkModeColor('#042743','blue','#449ee6')} style={{backgroundColor:'#042743'}} ></div>
+          <div className="color-palette mx-2" onClick={()=>props.changeDarkModeColor('#062925','#2a4242','#068879')} style={{backgroundColor:'#062925'}} ></div>
+          <div className="color-palette mx-2" onClick={()=>props.changeDarkModeColor('black','#BB86FC','#bb86fce0')} style={{backgroundColor:'black'}} ></div>
 
           <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
             <input className="form-check-input" onClick={props.toggleMode} type="checkbox"  aria-checked="true" role="switch" id="flexSwitchCheckDefault"/>
