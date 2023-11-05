@@ -45,6 +45,7 @@ function App() {
       setbodybackgroundColor('white');
       setbuttonsColor('#0d6efd');
       setAboutUsButtonsColor('white');
+      showAlert('Light mode has been enable', 'success');
     }
   }
 
