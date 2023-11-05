@@ -13,19 +13,19 @@ export default function About(props) {
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header">
-                        <button className="accordion-button"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button style={{backgroundColor:props.AboutUsButtonsColor}} className="accordion-button"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Analyze Your text
                         </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <div className="accordion-body" style={myStyle}>
-                           Textutils gives you a way to analyze your text quickly and efficiently. Be it word count, character count or 
+                           Textutils gives you a way to analyze your text quickly and efficiently. Be it word count or character count. 
                         </div>
                     </div>
                 </div>
                 <div className="accordion-item" > 
                     <h2 className="accordion-header">
-                        <button className="accordion-button  collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button style={{backgroundColor:props.AboutUsButtonsColor}} className="accordion-button  collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Free to use
                         </button>
                     </h2>
@@ -39,7 +39,7 @@ export default function About(props) {
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header">
-                        <button className="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button style={{backgroundColor:props.AboutUsButtonsColor}} className="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Browser Compatible
                         </button>
                     </h2>

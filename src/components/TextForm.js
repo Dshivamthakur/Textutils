@@ -23,10 +23,10 @@ export default function TextForm(props) {
     props.showAlert('Extra spaces removed!','success');
   };
   const handleCopy = () => {
-    var text = document.getElementById('myBox');
-    text.select();
-    navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
+    // var text = document.getElementById('myBox');
+    // text.select();
+    navigator.clipboard.writeText(text);
+    // document.getSelection().removeAllRanges();
     props.showAlert('Copied to clipboard!','success');
   };
 
@@ -47,26 +47,27 @@ export default function TextForm(props) {
             onChange={handleOnChange}
           ></textarea>
         </div>
-        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleUpClick}>
+        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleUpClick} style={{background:props.buttonsColor, borderColor:props.buttonsColor}}>
           Convert to uppercase
         </button>
-        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleLoClick}>
+        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleLoClick} style={{background:props.buttonsColor, borderColor:props.buttonsColor}}>
           Convert to Lowercase
         </button>
-        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleClearClick}>
+        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleClearClick} style={{background:props.buttonsColor, borderColor:props.buttonsColor}}>
           Clear
         </button>
-        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleRemoveExtraSpaceClick}>
+        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleRemoveExtraSpaceClick} style={{background:props.buttonsColor, borderColor:props.buttonsColor}}>
           Remove Extra Spaces
         </button>
-        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleCopy}>
+        <button disabled = {text.length === 0} className="btn btn-primary mx-1  my-1 ChangeColors" onClick={handleCopy} style={{background:props.buttonsColor, borderColor:props.buttonsColor}}>
           Copy Text
         </button> 
       </div>
       <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
         <h2>Your text summary</h2>
         <p>
-          {text.length === 0 ? 0 : text[0] === ' ' ? setText(''): text.split(/\s(?=\w)/).length} words and{" "}
+          {text.length === 1 ? text[0] === ' ' ? setText('') : null: null }
+          {text.length === 0 ? 0 : text.split(/\s(?=\w)/).length} words and{" "}
           {text.length} characters
         </p>
         {/* An avg reader takes 0.008 minutes to read one word */}
