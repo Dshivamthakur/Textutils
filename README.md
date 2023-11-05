@@ -7,7 +7,7 @@ enhancing text editing capabilities.
 <li>React</li>
 <li>JSX</li>
 <li>Bootstrap</li>
-
+<br />
 ![image](https://github.com/Dshivamthakur/Textutils/assets/88136860/3d6fdd83-4f16-40e7-86be-725a6ade44c4)
 
 ![image](https://github.com/Dshivamthakur/Textutils/assets/88136860/a809f50f-39b0-485b-843e-2c28d09428c8)
